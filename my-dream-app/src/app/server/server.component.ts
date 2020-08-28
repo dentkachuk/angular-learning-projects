@@ -1,0 +1,18 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-server',
+  templateUrl: './server.component.html',
+  styleUrls: ['./server.component.less']
+})
+export class ServerComponent implements OnInit {
+  serverId = 10;
+  getServerStatus = 'offline';
+
+  constructor() {
+  }
+
+  ngOnInit(): void {
+  }
+
+}

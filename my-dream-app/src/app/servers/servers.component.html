@@ -1,0 +1,16 @@
+<div class="d-flex align-items-center">
+    <label for="server-name" class="mr-3">Server Name</label>
+    <input type="text" placeholder="Enter server name"
+           class="form-control mr-3"
+           [(ngModel)]="serverName"
+           id="server-name">
+    <button class="btn btn-outline-primary"
+            (click)="onCreateServer()"
+            [disabled]="!allowNewServer">Add new server</button>
+</div>
+<hr>
+<p>{{ serverCreationStatus }}</p>
+<app-server></app-server>
+<app-server></app-server>
+<app-server></app-server>
+<app-server></app-server>
