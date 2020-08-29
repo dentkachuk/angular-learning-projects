@@ -1,18 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-server',
-  templateUrl: './server.component.html',
-  styleUrls: ['./server.component.less']
+    selector: 'app-server',
+    templateUrl: './server.component.html',
+    styleUrls: ['./server.component.less']
 })
 export class ServerComponent implements OnInit {
-  serverId = 10;
-  getServerStatus = 'offline';
+    serverId = 10;
+    serverStatus = 'offline';
 
-  constructor() {
-  }
+    constructor() {
+        this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
+    }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
 }
